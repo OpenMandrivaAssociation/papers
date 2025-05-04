@@ -12,6 +12,7 @@ URL:            https://gitlab.gnome.org/GNOME/Incubator/papers
 Source0:        https://download.gnome.org/sources/papers/48/papers-%{version}.tar.xz
 Source1:        vendor.tar.xz
 BuildRequires:  rust-packaging
+BuildRequires:	desktop-file-utils
 BuildRequires:  gsettings-desktop-schemas
 BuildRequires:	gettext
 BuildRequires:  meson >= 0.53.0
