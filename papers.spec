@@ -134,7 +134,7 @@ A extension for support document on nautilus.
 
 %find_lang %{name}
 
-%files
+%files -f %{name}.lang
 %license COPYING
 %doc NEWS* README.md
 %{_bindir}/papers
@@ -191,5 +191,3 @@ A extension for support document on nautilus.
 
 %files -n nautilus-extension-papers
 %{_libdir}/nautilus/extensions-4/libpapers-document-properties.so
-
-%files lang -f %{name}.lang
