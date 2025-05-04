@@ -1,3 +1,5 @@
+%define devname %mklibname -d papers
+
 %bcond_without test
 %define major_ver 4
 %define api_ver %{major_ver}_0
@@ -44,82 +46,15 @@ Suggests:       papers-plugin-tiffdocument
 Papers is a document viewer capable of displaying single-page and multi-page
 document formats like PDF and PostScript.
 
-%package -n libppsdocument%{api_ver}-%{plugin_ver}
-Summary:        GNOME Document Viewer System Library
-
-%description -n libppsdocument%{api_ver}-%{plugin_ver}
-Papers is a document viewer capable of displaying single-page and multi-page
-document formats like PDF and PostScript.
-
-%package -n libppsview%{api_ver}-%{major_ver}
-Summary:        GNOME Document Viewer System Library
-
-%description -n libppsview%{api_ver}-%{major_ver}
-Papers is a document viewer capable of displaying single-page and multi-page
-document formats like PDF and PostScript.
-
-%package -n typelib-1_0-PapersDocument-%{api_ver}
-Summary:        Introspection bindings for the Papers Document Viewer
-
-%description -n typelib-1_0-PapersDocument-%{api_ver}
-Papers is a document viewer capable of displaying single-page and multi-page
-document formats like PDF and PostScript.
-
-%package -n typelib-1_0-PapersView-%{api_ver}
-Summary:        Introspection bindings for the Papers Document Viewer
-
-%description -n typelib-1_0-PapersView-%{api_ver}
-Papers is a document viewer capable of displaying single-page and multi-page
-document formats like PDF and PostScript.
-
-%package devel
+%package -n %{devname}
 Summary:        Header files for the Papers Document Viewer
-Requires:       %{name} = %{version}
-Requires:       typelib-1_0-PapersDocument-%{api_ver} = %{version}
-Requires:       typelib-1_0-PapersView-%{api_ver} = %{version}
+Requires:       %{name} = %{EVRD}
 
-%description devel
+%description -n %{devname}
 Papers is a document viewer capable of displaying single-page and multi-page
 document formats like PDF and PostScript.
 
 This package contains the header files for building additional plugins.
-
-%package plugin-comicsdocument
-Summary:        Comics document support for Papers
-Requires:       %{name} = %{version}
-
-%description plugin-comicsdocument
-A plugin for Papers to read Comics documents.
-
-%package plugin-djvudocument
-Summary:        DjVu document support for Papers
-Requires:       %{name} = %{version}
-
-%description plugin-djvudocument
-A plugin for Papers to read DjVu documents.
-
-%package plugin-pdfdocument
-Summary:        PDF document support for Papers
-Requires:       %{name} = %{version}
-
-%description plugin-pdfdocument
-A plugin for Papers to read PDF documents.
-
-%package plugin-tiffdocument
-Summary:        TIFF document support for Papers
-Requires:       %{name} = %{version}
-
-%description plugin-tiffdocument
-A plugin for Papers to read TIFF images.
-
-%package -n nautilus-extension-papers
-Summary:        Papers document support for nautilus
-Requires:       %{name} = %{version}
-
-%description -n nautilus-extension-papers
-A extension for support document on nautilus.
-
-%lang_package
 
 %prep
 %autosetup -a1
@@ -162,26 +97,10 @@ EOF
 %{_datadir}/glib-2.0/schemas/%{appid}.gschema.xml
 %{_datadir}/icons/hicolor/*/apps/%{appid}*
 %{_datadir}/thumbnailers
-
-%files -n libppsdocument%{api_ver}-%{plugin_ver}
 %{_libdir}/libppsdocument-%{major_ver}.0.so.%{plugin_ver}*
-
-%files -n libppsview%{api_ver}-%{major_ver}
 %{_libdir}/libppsview-%{major_ver}.0.so.%{major_ver}*
-
-%files -n typelib-1_0-PapersDocument-%{api_ver}
 %{_libdir}/girepository-1.0/PapersDocument-%{major_ver}.0.typelib
-
-%files -n typelib-1_0-PapersView-%{api_ver}
 %{_libdir}/girepository-1.0/PapersView-%{major_ver}.0.typelib
-
-%files devel
-%{_includedir}/papers
-%{_libdir}/*.so
-%{_datadir}/gir-1.0/*.gir
-%{_libdir}/pkgconfig/papers*.pc
-
-%files plugin-comicsdocument
 %dir %{_libdir}/papers/
 %dir %{_libdir}/papers/%{plugin_ver}
 %dir %{_libdir}/papers/%{plugin_ver}/backends
@@ -189,20 +108,22 @@ EOF
 %{_libdir}/papers/%{plugin_ver}/backends/comicsdocument.papers-backend
 %{_libdir}/papers/%{plugin_ver}/backends/libcomicsdocument.so
 
-%files plugin-djvudocument
 %{_datadir}/metainfo/papers-djvudocument.metainfo.xml
 %{_libdir}/papers/%{plugin_ver}/backends/djvudocument.papers-backend
 %{_libdir}/papers/%{plugin_ver}/backends/libdjvudocument.so
 
-%files plugin-pdfdocument
 %{_datadir}/metainfo/papers-pdfdocument.metainfo.xml
 %{_libdir}/papers/%{plugin_ver}/backends/pdfdocument.papers-backend
 %{_libdir}/papers/%{plugin_ver}/backends/libpdfdocument.so
 
-%files plugin-tiffdocument
 %{_datadir}/metainfo/papers-tiffdocument.metainfo.xml
 %{_libdir}/papers/%{plugin_ver}/backends/tiffdocument.papers-backend
 %{_libdir}/papers/%{plugin_ver}/backends/libtiffdocument.so
 
-%files -n nautilus-extension-papers
 %{_libdir}/nautilus/extensions-4/libpapers-document-properties.so
+
+%files -n %{devname}
+%{_includedir}/papers
+%{_libdir}/*.so
+%{_datadir}/gir-1.0/*.gir
+%{_libdir}/pkgconfig/papers*.pc
