@@ -27,6 +27,7 @@ BuildRequires:  pkgconfig(exempi-2.0)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
 BuildRequires:  pkgconfig(gtk4) >= 4.17.1
+BuildRequires:	pkgconfig(harfbuzz-gobject)
 BuildRequires:  pkgconfig(libadwaita-1)
 BuildRequires:  pkgconfig(libarchive)
 BuildRequires:  pkgconfig(libsecret-1)
