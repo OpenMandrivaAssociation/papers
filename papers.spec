@@ -155,7 +155,7 @@ EOF
 %{_bindir}/papers
 %{_bindir}/papers-previewer
 %{_bindir}/papers-thumbnailer
-%{_mandir}/man?/*%{ext_man}
+%{_mandir}/man?/*
 %{_datadir}/metainfo/%{appid}.metainfo.xml
 %{_datadir}/applications/%{appid}-previewer.desktop
 %{_datadir}/applications/%{appid}.desktop
