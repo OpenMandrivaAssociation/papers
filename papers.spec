@@ -13,6 +13,7 @@ Source0:        https://download.gnome.org/sources/papers/48/papers-%{version}.t
 Source1:        vendor.tar.xz
 BuildRequires:  rust-packaging
 BuildRequires:  gsettings-desktop-schemas
+BuildRequires:	gettext
 BuildRequires:  meson >= 0.53.0
 BuildRequires:  pkgconfig(libnautilus-extension-4)
 BuildRequires:  python-gi
