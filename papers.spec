@@ -37,10 +37,8 @@ BuildRequires:  pkgconfig(libspectre)
 BuildRequires:  pkgconfig(libspelling-1)
 BuildRequires:  pkgconfig(libtiff-4)
 BuildRequires:  pkgconfig(poppler-glib)
-Recommends:     papers-plugin-pdfdocument
-Suggests:       papers-plugin-comicsdocument
-Suggests:       papers-plugin-djvudocument
-Suggests:       papers-plugin-tiffdocument
+Requires: typelib(Poppler)
+Requires: poppler
 
 %description
 Papers is a document viewer capable of displaying single-page and multi-page
