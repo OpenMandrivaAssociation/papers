@@ -14,7 +14,7 @@ Source1:        vendor.tar.xz
 BuildRequires:  rust-packaging
 BuildRequires:  gsettings-desktop-schemas
 BuildRequires:  meson >= 0.53.0
-BuildRequires:  pkgconfig(nautilus)
+BuildRequires:  pkgconfig(libnautilus-extension-4)
 BuildRequires:  python-gi
 BuildRequires:  pkgconfig(appstream-glib)
 BuildRequires:  pkgconfig(dbus-1)
