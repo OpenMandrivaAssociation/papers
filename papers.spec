@@ -123,6 +123,16 @@ A extension for support document on nautilus.
 
 %prep
 %autosetup -a1
+%cargo_prep -v vendor
+
+cat >>Cargo.toml <<EOF
+
+[source.crates-io]
+replace-with = "vendored-sources"
+
+[source.vendored-sources]
+directory = "vendor"
+EOF
 
 %build
 %meson \
