@@ -3,7 +3,9 @@
 %bcond_without test
 %define major_ver 4
 %define api_ver %{major_ver}_0
-%define plugin_ver 5
+%define plugin_ver 6
+%defone minor 5
+
 %define appid org.gnome.Papers
 Name:           papers
 Version:        49.0
@@ -97,7 +99,7 @@ EOF
 %{_datadir}/icons/hicolor/*/apps/%{appid}*
 %{_datadir}/thumbnailers
 %{_libdir}/libppsdocument-%{major_ver}.0.so.%{plugin_ver}*
-%{_libdir}/libppsview-%{major_ver}.0.so.%{major_ver}*
+%{_libdir}/libppsview-%{major_ver}.0.so.%{minor}*
 %{_libdir}/girepository-1.0/PapersDocument-%{major_ver}.0.typelib
 %{_libdir}/girepository-1.0/PapersView-%{major_ver}.0.typelib
 %dir %{_libdir}/papers/
