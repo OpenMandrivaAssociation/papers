@@ -105,20 +105,20 @@ EOF
 %dir %{_libdir}/papers/
 %dir %{_libdir}/papers/%{plugin_ver}
 %dir %{_libdir}/papers/%{plugin_ver}/backends
-#{_datadir}/metainfo/papers-comicsdocument.metainfo.xml
-#{_libdir}/papers/%{plugin_ver}/backends/comicsdocument.papers-backend
+%{_datadir}/metainfo/org.gnome.Papers.ComicsDocument.metainfo.xml
+%{_libdir}/papers/6/backends/org.gnome.Papers.ComicsDocument.papers-backend
 %{_libdir}/papers/%{plugin_ver}/backends/libcomicsdocument.so
 
-#{_datadir}/metainfo/papers-djvudocument.metainfo.xml
-#{_libdir}/papers/%{plugin_ver}/backends/djvudocument.papers-backend
+%{_datadir}/metainfo/org.gnome.Papers.DjvuDocument.metainfo.xml
+%{_libdir}/papers/6/backends/org.gnome.Papers.DjvuDocument.papers-backend
 %{_libdir}/papers/%{plugin_ver}/backends/libdjvudocument.so
 
-#{_datadir}/metainfo/papers-pdfdocument.metainfo.xml
-#{_libdir}/papers/%{plugin_ver}/backends/pdfdocument.papers-backend
+%{_datadir}/metainfo/org.gnome.Papers.PdfDocument.metainfo.xml
+%{_libdir}/papers/6/backends/org.gnome.Papers.PdfDocument.papers-backend
 %{_libdir}/papers/%{plugin_ver}/backends/libpdfdocument.so
 
-#{_datadir}/metainfo/papers-tiffdocument.metainfo.xml
-#{_libdir}/papers/%{plugin_ver}/backends/tiffdocument.papers-backend
+%{_datadir}/metainfo/org.gnome.Papers.TiffDocument.metainfo.xml
+%{_libdir}/papers/6/backends/org.gnome.Papers.TiffDocument.papers-backend
 %{_libdir}/papers/%{plugin_ver}/backends/libtiffdocument.so
 
 %{_libdir}/nautilus/extensions-4/libpapers-document-properties.so
