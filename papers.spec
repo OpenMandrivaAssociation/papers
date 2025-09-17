@@ -23,6 +23,7 @@ BuildRequires:  meson >= 0.53.0
 BuildRequires:  pkgconfig(libnautilus-extension-4)
 BuildRequires:  python-gi
 BuildRequires:  pkgconfig(appstream-glib)
+BuildRequires:	pkgconfig(blueprint-compiler)
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(ddjvuapi)
 BuildRequires:  pkgconfig(exempi-2.0)
