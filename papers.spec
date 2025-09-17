@@ -4,7 +4,7 @@
 %define major_ver 4
 %define api_ver %{major_ver}_0
 %define plugin_ver 6
-%defone minor 5
+%define minor 5
 
 %define appid org.gnome.Papers
 Name:           papers
