@@ -8,12 +8,12 @@
 
 %define appid org.gnome.Papers
 Name:           papers
-Version:        49.0
+Version:        49.1
 Release:        1
 Summary:        GNOME Document Viewer
 License:        GPL-2.0-or-later
 URL:            https://gitlab.gnome.org/GNOME/Incubator/papers
-Source0:        https://download.gnome.org/sources/papers/48/papers-%{version}.tar.xz
+Source0:        https://download.gnome.org/sources/papers/49/papers-%{version}.tar.xz
 Source1:        vendor.tar.xz
 BuildRequires:  rust-packaging
 BuildRequires:	rustfmt
