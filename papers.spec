@@ -15,6 +15,7 @@ License:        GPL-2.0-or-later
 URL:            https://gitlab.gnome.org/GNOME/Incubator/papers
 Source0:        https://download.gnome.org/sources/papers/49/papers-%{version}.tar.xz
 Source1:        vendor.tar.xz
+BuildRequires:	appstream
 BuildRequires:  rust-packaging
 BuildRequires:	rustfmt
 BuildRequires:	clippy
