@@ -8,7 +8,7 @@
 
 %define appid org.gnome.Papers
 Name:           papers
-Version:        50.0
+Version:        50.1
 Release:        1
 Summary:        GNOME Document Viewer
 License:        GPL-2.0-or-later
