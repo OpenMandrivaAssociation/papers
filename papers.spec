@@ -9,7 +9,7 @@
 %define appid org.gnome.Papers
 Name:           papers
 Version:        51.1
-Release:        1
+Release:        2
 Summary:        GNOME Document Viewer
 License:        GPL-2.0-or-later
 URL:            https://gitlab.gnome.org/GNOME/Incubator/papers
